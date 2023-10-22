@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #adcac4;
+}
+
+.card{
+    perspective: 1000px;
+    position: relative;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.card:hover{
+
+    transform: rotateY(180deg);
+
+}
+
+.card .front{
+    backface-visibility: hidden;
+    z-index: 1000;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #f9fbfb;
+    border: 1px solid #adcac4;
+    color: #473c37;
+    backface-visibility: hidden; 
+}
+
+.card .front .shop-header{
+    color: #ec5c02;
+    padding: 5px;
+    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9fbfb;
+}
+
+.card .front .shop-header h5{
+    font-weight: 500;
+}
+
+.card .front .shop-header i{
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.card .front .item .item-name{
+    padding: 5px 0 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card .front .item .item-name h4{
+    font-size: 25px;
+}
+
+.card .front .item .item-name .price{
+    font-size: 25px;
+    font-weight: bolder;
+}
+    
+.card .front .item .item-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .front .item .item-info .image{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border: 3px solid #97ada8;
+    border-radius: 10px;
+
+}
+
+.card .front .item .item-info .image img{
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.card .front .item .item-info .about{
+    padding-left: 10px;
+    font-size: 8px;
+    text-align: justify;
+}
+
+.card .back{
+    transform: rotateY(180deg);
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #f9fbfb;
+    border: 1px solid #adcac4;
+    color: #473c37;
+}
+
+.card .back .payment{
+    display: flex;
+    align-items: center;
+}
+
+.card .back .payment .method{
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.card .back .payment .bx{
+    font-size: 30px;
+    justify-content: space-around;
+}
+
+
+.card .back .credit-back{
+    margin-top: 10px;
+    color: #f9fbfb;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ec5c02;
+}
+
+
+
+.card .back .credit-back .first-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .back .credit-back .first-row .bxl-visa{
+    font-size: 80px;
+}   
+
+.card .back .credit-back .first-row .chip{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 30px;    
+}
+
+.card .back .credit-back .first-row .chip img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.card .back .credit-back .second-row{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.card .back .credit-back .second-row span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 73px;
+    padding-top: 5px;
+}
+
+.card .back .credit-back .second-row .number{
+    padding-top: 2px;
+}
+
+.card .back .credit-back .third-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.card .back .credit-back .third-row .exp{
+    text-align: right;
+}
+
